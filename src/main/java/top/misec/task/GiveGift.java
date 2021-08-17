@@ -27,7 +27,7 @@ public class GiveGift implements Task {
     public void run(ConfigUser user) {
         try {
             /* 从配置类中读取是否需要执行赠送礼物 */
-            if (!Boolean.TRUE.equals(config.getGiveGift())) {
+            if (! (config.getGiveGift())) {
                 log.info("未开启自动送出即将过期礼物功能");
                 return;
             }

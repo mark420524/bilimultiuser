@@ -25,7 +25,7 @@ public class CoinLogs implements Task {
             double expend = 0.0;
             for (JsonElement jsonElement : coinList) {
                 double delta = jsonElement.getAsJsonObject().get("delta").getAsDouble();
-                String reason = jsonElement.getAsJsonObject().get("reason").getAsString();
+                //String reason = jsonElement.getAsJsonObject().get("reason").getAsString();
                 if (delta > 0) {
                     income += delta;
                 }else {

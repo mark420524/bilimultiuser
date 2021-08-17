@@ -6,7 +6,6 @@ import top.misec.apiquery.ApiList;
 import top.misec.apiquery.OftenApi;
 import top.misec.config.Config;
 import top.misec.config.ConfigUser;
-import top.misec.login.Verify;
 import top.misec.utils.HelpUtil;
 import top.misec.utils.HttpUtil;
 
@@ -46,7 +45,7 @@ public class ChargeMe implements Task {
             return;
         }
 
-        if (!Boolean.TRUE.equals(Config.getInstance().getMonthEndAutoCharge())) {
+        if (! Config.getInstance().getMonthEndAutoCharge() ) {
             log.info("未开启月底给自己充电功能");
             return;
         }
@@ -74,8 +73,7 @@ public class ChargeMe implements Task {
         /*
           判断条件 是月底&&是年大会员&&b币券余额大于2&&配置项允许自动充电
          */
-        if (day >= 28 && couponBalance >= 2 &&
-                Boolean.TRUE.equals(Config.getInstance().getMonthEndAutoCharge())) {
+        if (day >= 28 && couponBalance >= 2 && Config.getInstance().getMonthEndAutoCharge() ) {
             String requestBody = "bp_num=" + couponBalance
                     + "&is_bp_remains_prior=true"
                     + "&up_mid=" + userId
