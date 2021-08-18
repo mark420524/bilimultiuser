@@ -88,4 +88,14 @@ public class ApiList {
      */
     public static String getBvidByCreate = "https://api.bilibili.com/x/space/arc/search";
     public static String getCionLog="https://api.bilibili.com/x/member/web/coin/log?jsonp=jsonp";
+
+    public static final String BAG_GIFT_SEND = "https://api.live.bilibili.com/gift/v2/live/bag_send";
+
+    public static final String BAG_GIFT_LIST = "https://api.live.bilibili.com/xlive/web-room/v1/gift/bag_list";
+
+    public static final String ROOM_INFO_OLD = "http://api.live.bilibili.com/room/v1/Room/getRoomInfoOld";
+
+    public static final String ROOM_INFO = "https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom";
+
+    public static final String RECOMMEND_LIST = "https://api.live.bilibili.com/relation/v1/AppWeb/getRecommendList";
 }
